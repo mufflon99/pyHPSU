@@ -20,7 +20,7 @@ class CanPI(object):
         self.hpsu = hpsu
         try:
             # TODO evaluate can.ThreadSafeBus
-            self.bus = can.interface.Bus(channel='can0', bustype='socketcan_native')
+            self.bus = can.interface.Bus(channel='can0', bustype='socketcan')
         except Exception:
             self.hpsu.logger.exception('Error opening bus can0')
             sys.exit(os.EX_CONFIG)
@@ -35,7 +35,6 @@ class CanPI(object):
     def get_with_default(self, config, section, name, default):
         if "config" not in config.sections():
             return default
-        
         if config.has_option(section,name):
             return config.get(section,name)
         else:
@@ -85,7 +84,7 @@ class CanPI(object):
         i = 0
         #print("sent: " + str(command))
         try:
-            msg = can.Message(arbitration_id=receiver_id, data=msg_data, extended_id=False, dlc=7)
+            msg = can.Message(arbitration_id=receiver_id, data=msg_data, is_extended_id=False, dlc=7)
             self.bus.send(msg)
             self.hpsu.logger.debug("CanPI, %s sent: %s" % (cmd['name'], msg))
 
