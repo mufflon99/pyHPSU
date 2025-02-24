@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+X_#!/usr/bin/env python3
 #
 # -*- coding: utf-8 -*-
 
@@ -453,4 +453,4 @@ if __name__ == "__main__":
         traceback.print_exc()
         #print("Exception: {}".format(type(e).__name__))
         #print("Exception message: {}".format(e))
-        sys.exit(os.SOFTWARE)
+        sys.exit(os.EX_SOFTWARE)
