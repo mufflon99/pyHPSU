@@ -6,7 +6,7 @@ Description=HPSU in auto mode
 Type=simple
 ExecStartPre=
 EnvironmentFile=/etc/pyHPSU/pyhpsu.conf
-ExecStart=/usr/bin/pyHPSU.py -a 
+ExecStart=/usr/bin/pyHPSU.py --mqtt_daemon -a -o mqtt
 ExecReload=
 ExecStop=
 
