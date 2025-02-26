@@ -491,7 +491,7 @@
 			"divisor" : "1", 
 			"writable" : "false", 
 			"unit" : "",
-			"type" : "value"
+			"type" : "longint"
 		},
 		"outdoor_type" : { 
 			"name" : "outdoor_type", 
@@ -802,7 +802,7 @@
 		},
 		"aux_fct" : { 
 			"name" : "aux_fct", 
-			"command" : "31 00 FA 06 71 00 00", 
+			"command" : "31 00 FA 06 96 00 00", 
 			"id" : "190", 
 			"divisor" : "1", 
 			"writable" : "true", 
@@ -916,10 +916,10 @@
 			"name" : "t_frost_protect", 
 			"command" : "61 00 FA 0A 00 00 00", 
 			"id" : "190", 
-			"divisor" : "1", 
+			"divisor" : "10", 
 			"writable" : "true", 
 			"unit" : "deg",
-			"type" : "longint"
+			"type" : "float"
 		},
 		"insulation" : { 
 			"name" : "insulation", 
@@ -1006,7 +1006,7 @@
 		},
 		"t_screed_day7" : { 
 			"name" : "screed_day7", 
-			"command" : "61 00 FA 0B BF 00 00", 
+			"command" : "61 00 FA 0B BD 00 00", 
 			"id" : "190", 
 			"divisor" : "10", 
 			"writable" : "true", 
@@ -1141,7 +1141,7 @@
 		},
 		"t_screed_day22" : { 
 			"name" : "screed_day22", 
-			"command" : "61 00 FA 0B CE 00 00", 
+			"command" : "61 00 FA 0B CD 00 00", 
 			"id" : "190", 
 			"divisor" : "10", 
 			"writable" : "true", 
@@ -1452,54 +1452,10 @@
 		},
 		"t_room" :{
 			"name" : "t_room",
-			"command" : "31 00 FA 00 11 00 00",
+			"command" : "81 00 FA 00 11 00 00",
 			"id" : "190",
 			"divisor" : "10",
 			"writable" : "false",
-			"unit" : "deg",
-			"type" : "float"
-		},
-		"comp_active" : {
-			"name" : "comp_active",
-			"command" : "A1 00 61 00 00 00 00",
-			"id" : "190",
-			"divisor" : "1",
-			"writable" : "false",
-			"unit" : "",
-			"type" : "longint",
-			"value_code" : {
-				"off" : "0",
-				"on" : "256"
-			}
-		},
-		"pump_active" :{
-			"name" : "pump_active",
-			"command" : "A1 00 FA FD AC 00 00",
-			"id" : "190",
-			"divisor" : "1",
-			"writable" : "false",
-			"unit" : "",
-			"type" : "longint",
-			"value_code" : {
-				"off" : "0",
-				"on" : "256"
-			}
-		},
-		"temperature_spread_pwm" : {
-			"name" : "temperature_spread_pwm",
-			"command" : "A1 00 FA 06 DB 00 00",
-			"id" : "190",
-			"divisor" : "10",
-			"writable" : "true",
-			"unit" : "deg",
-			"type" : "float"
-		},
-		"offset_t_flow" : {
-			"name" : "offset_t_flow",
-			"command" : "A1 00 FA 06 E2 00 00",
-			"id" : "190",
-			"divisor" : "10",
-			"writable" : "true",
 			"unit" : "deg",
 			"type" : "float"
 		}
